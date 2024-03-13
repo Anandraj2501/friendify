@@ -1,0 +1,143 @@
+@font-face {
+    font-family: font;
+    src: url("../../public/Poppins/Poppins-Medium.ttf");
+  }
+.authentication-body{
+    display: flex;
+
+}
+.auth-body-left-container{
+    background-image: url("../../public/laptopimage.png");
+    width: 60vw; /* Example width */
+    height: 100vh; /* Example height */
+    background-size: cover; /* Example background size */
+    background-repeat: no-repeat; /* Example background repeat */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.greet{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: .7rem; */
+}
+.hello{
+    font-size: 40px;
+    font-family: "font";
+}
+.greet-child2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-weight: 100;
+    font-size: 15px;
+}
+.register-button{
+    padding: 10px 20px;
+    background-color: rgb(78, 93, 255);
+    border-radius: 50px;
+    border: none;
+    font-family: "font";
+    font-size: 18px;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.auth-body-right-container{
+    width: 40vw;
+    position: relative;
+}
+.auth-container{
+    right: 37px;
+    border-radius: 40px 0px 0px 40px;
+    background-color: white;
+    width: 40vw;
+    position: absolute;
+    height: 100%;
+}
+.auth-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+    top: 200px;
+    position: absolute;
+    height: calc(100% - 200px);
+    bottom: 0;
+}
+.auth-greet{
+    font-family: "font";
+    font-size: 40px;
+    font-weight: 500;
+}
+.auth-greet2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 15px;
+    color: rgba(58, 57, 57, 0.503);
+}
+.form{
+    height: 100%;
+    padding-top: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+.labels{
+    font-family: "font";
+    font-size: 20px;
+    margin-top: 40px;
+}
+.text-container{
+    border: 1px solid rgba(62, 62, 62, 0.349);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "font";
+}
+.auth-button{
+    padding: 10px 10px;
+    background-color: rgb(78, 93, 255);
+    border-radius: 50px;
+    border: none;
+    font-family: "font";
+    font-size: 18px;
+    color: white;
+    width: 11em;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 100%;
+}
+.error{
+    color: red;
+    font-family: "font";
+}
+
+@media screen and (max-width: 895px) {
+    .auth-greet{
+        font-size: 20px;
+    }
+    .auth-greet2{
+        font-size: 10px;
+    }
+    .labels{
+        font-size: 15px;
+    }
+    .hello{
+        font-size: 30px;
+    }
+    .greet-child2{
+        font-size: 10px;
+    }
+    .register-button{
+        font-size: 14px;
+    }
+    .auth-button{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px){
+    .register-button{
+        font-size: 8px;
+    }
+}
