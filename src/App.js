@@ -5,6 +5,7 @@ import MainContainer from './Main/MainContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ModalContextProvider } from "./utils/Context";
 
+
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/login" exact element={<Authentication />} />
-            <Route path="/" element={<MainContainer />} />
+            <Route path="/*" element={<MainContainer />} />
           </Routes>
         </Router>
       </ModalContextProvider>

@@ -1,15 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
-import TokenSlice from "./TokenSlice";
+import userProfileSlice from "./userProfileSlice";
+import SearchSlice from "./SearchSlice";
 
-const persistedToken = localStorage.getItem('token');
-const preloadedState = {
-    auth: persistedToken || '' // Initialize with token from localStorage, if available
-};
+
+const userData = JSON.parse(localStorage.getItem("userData"));
+
+
 const Store = configureStore({
     reducer: {
-        auth: TokenSlice
+        userDetails:userProfileSlice,
+        search: SearchSlice
     },
-    preloadedState
+    preloadedState: {
+        userDetails: userData || '' // Set preloadedState here
+    }
 })
 
 export default Store;

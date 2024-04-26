@@ -33,8 +33,7 @@ const Login = ()=>{
         try{
             const data = await signIn(formData);
             console.log(data,"user");
-            toast.success("User Created Successfully");
-            navigate("/");
+            // navigate("/");
         }catch(error){
             
         }

@@ -3,9 +3,12 @@
     src: url("../../public/Poppins/Poppins-Medium.ttf");
 }
 
+body {
+    font-family: "font";
+}
+
 .main-container {
     display: flex;
-
 }
 
 .LeftSideBar-Container {
@@ -39,10 +42,12 @@
     font-size: 28px;
     border-radius: 10px;
     cursor: pointer;
+    color: black;
 }
 
 .inactive-link {
     background-color: #7b93fb;
+    color: black;
     padding: 9px;
     font-size: 28px;
     border-radius: 10px;
@@ -65,6 +70,33 @@
     align-items: center;
     position: relative;
     left: 133px;
+}
+
+.schedulePosts-Container {
+    width: calc(100% - 133px);
+    box-sizing: border-box;
+    background-color: rgb(219 216 216 / 29%);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 133px;
+    height: 100vh;
+}
+
+.scheduled-post-table-container {
+    width: 40vw;
+    margin-top: 30px;
+}
+
+.scheduled-text {
+    display: block;
+    text-align: center;
+}
+.no-scheduled-post-text{
+    display: block;
+    text-align: center;
 }
 
 .search-bar {
@@ -90,6 +122,15 @@
 }
 
 .create-new-post-container {
+    margin-top: 35px;
+    background-color: white;
+    width: 40vw;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal{
     margin-top: 35px;
     background-color: white;
     width: 40vw;
@@ -172,6 +213,15 @@
     cursor: pointer;
 }
 
+.shimmer-posts {
+    width: 40vw;
+    background-color: white;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .profile-info {
     width: 100%;
     margin-left: 20px;
@@ -195,6 +245,9 @@
     color: rgb(119 115 115);
     display: block;
     margin-top: 14px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
 }
 
 .post-info-container {
@@ -204,10 +257,19 @@
 .post-image-contaienr {
     position: relative;
     width: 100%;
+    height: 50vh;
+}
+
+.noMore {
+    margin-top: 21px;
+    font-family: 'font';
+    text-align: center;
 }
 
 .post-img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .post-like-share-container {
@@ -229,6 +291,10 @@
     font-size: 25px;
 }
 
+.liked {
+    color: red;
+}
+
 .comment-logo {
     margin-left: 20px;
     font-size: 25px;
@@ -236,6 +302,11 @@
 
 .comments {
     margin-left: 10px;
+}
+
+.reply-container {
+    margin-left: 30px;
+
 }
 
 .share {
@@ -262,7 +333,7 @@
 
 
 .comments-container {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .comment-type-box {
@@ -274,6 +345,7 @@
     box-sizing: border-box;
     border: 2px solid rgb(92 92 92 / 65%);
     align-items: center;
+    margin-top: 25px;
 }
 
 .comment-input {
@@ -403,7 +475,7 @@
     font-size: 20px;
 }
 
-.story-container{
+.story-container {
     box-sizing: border-box;
     width: 40vw;
     border: 1px solid rgb(116 113 113 / 70%);
@@ -415,13 +487,353 @@
     margin-top: 30px;
     padding: 10px;
 }
-.story-container::-webkit-scrollbar{
+
+.story-container::-webkit-scrollbar {
     display: none;
 }
-.story-img-container{
+
+.story-img-container {
     width: 50px;
     border: 2px solid #7b93fb;
     position: relative;
     display: flex;
     border-radius: 50%;
+}
+
+.uploaded-image-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+#uploadedImage {
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td img {
+    width: 40px;
+}
+
+input[type="datetime-local"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Optional: Styling for when the input is focused */
+input[type="datetime-local"]:focus {
+    border-color: #007bff;
+    /* Change to your preferred focus color */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /* Change to your preferred focus box shadow */
+}
+
+.delete {
+    background-color: #7b93fb;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: "font";
+    cursor: pointer;
+}
+
+
+.userprofile-container {
+    width: calc(100% - 133px);
+    box-sizing: border-box;
+    background-color: rgb(219 216 216 / 29%);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    left: 133px;
+    height: 100vh;
+}
+.userprofile {
+    margin-top: 35px;
+    background-color: white;
+    width: 40vw;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.img-container>img{
+    width: 100px;
+    border-radius: 50%;
+}
+.username{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.ff-container{
+    display: flex;
+    justify-content: center;
+    gap: 2.0rem;
+    margin-top: 20px;
+}
+.total-posts>span{
+    color:rgb(151 150 150);
+}
+.friends>span{
+    color:rgb(151 150 150);
+}
+.all-posts{
+    margin-top: 20px;
+    background-color: white;
+    width: 40vw;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures posts wrap onto new lines */
+    justify-content: flex-start; /* Align posts to the left */
+    box-sizing: border-box;
+    padding-top: 18px;
+    padding-left: 10px;
+    height: 600px;
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+.all-posts::-webkit-scrollbar {
+    display: none;
+}
+.posts {
+    width: calc(33.33% - 10px); /* Adjust width of each post */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+    margin-right: 10px;
+    /* Add other styles for individual posts */
+}
+
+.upr-post-img {
+    width: 100%; /* Ensures image fills its container */
+    height: auto; /* Allows image to maintain aspect ratio */
+    border-radius: 10px;
+}
+.posts:nth-child(n+4) {
+    width: calc(33.33% - 10px); /* Ensure all posts have the same width */
+}
+.dropdown>button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "font";
+    color: white;
+    background-color: #007bff;
+}
+.suggestions{
+    position: absolute;
+    z-index: 10;
+    top: 66px;
+    background-color: rgb(219 216 216 / 118%);
+    width: 40vw;
+    border-radius: 10px;
+}
+.suggestions>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-inline-start: 0px;
+}
+.suggestions>ul>li{
+    list-style-type: none;
+    padding: 10px;
+}
+.suggestions>ul>li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.link-without-underline {
+    text-decoration: none; /* Remove underline */
+    color: black;
+  }
+@media only screen and (min-width: 668px) and (max-width: 1087px) {
+    .modal{
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .suggestions{
+        
+        width: 50vh;
+    }
+    .main-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .LeftSideBar-Container {
+      background-color: rgba(78, 93, 255, 0.866);
+      width: 100%; /* Adjusted width */
+      height: auto; /* Removed fixed height */
+      display: flex;
+      position: fixed;
+      bottom: 0px;
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end; /* Align to the bottom of the screen */
+    }
+  
+    .LeftBar-wrapper {
+      width: 50vh; /* Adjusted width */
+      position: relative;
+      display: flex;
+      padding: 10px 0px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .Links-Container {
+        display: flex;
+        gap: 2.2rem;
+        flex-direction: row;
+    }
+  
+    .Posts-Container {                                           
+      width: 100%; /* Adjusted width */
+      box-sizing: border-box;
+      background-color: rgb(219 216 216 / 29%);
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      left: 0px;
+      overflow-y: auto; /* Ensure container is scrollable */
+    }
+    
+  
+    .shimmer-posts {
+      width: 100%; /* Adjusted width */
+      background-color: white;
+      margin-top: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .search-bar,
+    .create-new-post-container,
+    .story-container,
+    .each-posts {
+      width: 50vh; /* Adjusted width */
+    }
+    .post-image-contaienr {
+        position: relative;
+        width: 100%;
+        height: 28vh;
+    }
+    .post-like-share-container {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .inactive-link {
+        background-color: #7b93fb;
+        color: black;
+        padding: 9px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .active-link {
+        background-color: white;
+        padding: 9px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
+    }
+    .Logout-Container{
+        padding-bottom: 0px;
+    }
+  
+    .modal-container {
+      position: fixed; /* Ensure modal covers the entire screen */
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(219 216 216 / 70%);
+    }
+  
+    .modal {
+      width: 90%; /* Adjusted width */
+      max-width: 400px; /* Limit maximum width */
+    }
+    .schedulePosts-Container{
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgb(219 216 216 / 29%);
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: 0px;
+        height: 100vh;
+    }
+  }
+  
+@media only screen and (max-width: 360px){
+    .camera{
+        font-size: 18px;
+    }
+    .share-button>button{
+        padding: 5px 10px;
+    }
+    .like-logo,
+    .comment-logo,
+    .share-logo{
+        font-size: 20px;
+    }
+    .inactive-link {
+        background-color: #7b93fb;
+        color: black;
+        padding: 9px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .active-link{
+        background-color: white;
+        padding: 9px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
+    }
 }
